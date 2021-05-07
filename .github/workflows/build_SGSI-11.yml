@@ -144,7 +144,7 @@ jobs:
          if: steps.var.outputs.upload_cow == 'true' 
          run: |
            curl -sL https://git.io/file-transfer | sh
-           ./transfer cow ./SGSI-build-tool-11/11/${{ steps.var.outputs.pack_sgsi }}
+           ./transfer lzs ./SGSI-build-tool-11/11/${{ steps.var.outputs.pack_sgsi }}
            
        - name: Upload SGSI to Artifact
          if: steps.var.outputs.upload_artifact == 'true'
