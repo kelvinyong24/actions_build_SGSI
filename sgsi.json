@@ -8,7 +8,7 @@
   "bug_fix": true,
   "version": "11",
   "upload_release": true,
-  "upload_cowtransfer": true,
+  "upload_cow": true,
   "upload_artifact": true,
   "use_7zip": false,
   "use_zip": true
