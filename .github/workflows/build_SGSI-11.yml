@@ -140,11 +140,11 @@ jobs:
          env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
             
-       - name: Uploading SGSI to Cowtransfer
-         if: steps.var.outputs.upload_cowtransfer == 'true' 
+       - name: Uploading SGSI to Cow
+         if: steps.var.outputs.upload_cow == 'true' 
          run: |
-           curl -sL https://git.io/cowtransfer | sh 
-           ./cowtransfer-uploader ${{ steps.var.outputs.pack_sgsi }}
+           curl -sL https://git.io/file-transfer | sh
+           ./transfer cow ./SGSI-build-tool-11/11/${{ steps.var.outputs.pack_sgsi }}
            
        - name: Upload SGSI to Artifact
          if: steps.var.outputs.upload_artifact == 'true'
