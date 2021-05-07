@@ -150,4 +150,4 @@ jobs:
          if: steps.var.outputs.upload_cow == 'true' 
          run: |
            curl -sL https://git.io/cowtransfer | sh 
-           ./cowtransfer-uploader SGSI-build-tool-11/11/${{ steps.var.outputs.pack_sgsi }}
+           ./cowtransfer-uploader /SGSI-build-tool-11/11/${{ steps.var.outputs.pack_sgsi }}
