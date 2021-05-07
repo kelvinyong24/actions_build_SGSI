@@ -141,7 +141,7 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
             
        - name: Uploading SGSI to Cowtransfer
-         if: steps.var.outputs.upload_cow == 'true' 
+         if: steps.var.outputs.upload_cowtransfer == 'true' 
          run: |
            curl -sL https://git.io/cowtransfer | sh 
            ./cowtransfer-uploader ${{ steps.var.outputs.pack_sgsi }}
