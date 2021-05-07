@@ -129,17 +129,7 @@ jobs:
          run: |
              cd SGSI-build-tool-11/11
              zip -r ${{ steps.var.outputs.pack_sgsi }} ./SGSI/*
-           
-       - name: Uploading SGSI to Release
-         if: steps.var.outputs.upload_release == 'true'
-         uses: softprops/action-gh-release@v1
-         with:
-           files: SGSI-build-tool-11/11/${{ steps.var.outputs.pack_sgsi }}
-           name: xiaoxinSGSI-${{ steps.var.outputs.rom_type }}-${{ steps.var.outputs.make_type }}-Android${{ steps.var.outputs.version }}-unpack
-           tag_name: main
-         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-            
+             
        - name: Uploading SGSI to Cow
          if: steps.var.outputs.upload_cow == 'true' 
          run: |
@@ -152,3 +142,15 @@ jobs:
          with: 
            name: xiaoxinSGSIs
            path: ${{ steps.var.outputs.pack_sgsi }}
+           
+       - name: Uploading SGSI to Release
+         if: steps.var.outputs.upload_release == 'true'
+         uses: softprops/action-gh-release@v1
+         with:
+           files: SGSI-build-tool-11/11/${{ steps.var.outputs.pack_sgsi }}
+           name: xiaoxinSGSI-${{ steps.var.outputs.rom_type }}-${{ steps.var.outputs.make_type }}-Android${{ steps.var.outputs.version }}-unpack
+           tag_name: main
+         env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+            
+
