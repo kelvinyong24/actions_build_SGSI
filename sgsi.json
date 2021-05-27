@@ -7,8 +7,7 @@
   "light_fix": true,
   "bug_fix": true,
   "version": "10",
-  "upload_gof": true,
-  "upload_wet": false,
+  "upload_transfer": true,
   "upload_release": false,
   "use_7zip": false,
   "use_zip": true
