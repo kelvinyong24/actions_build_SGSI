@@ -1,13 +1,14 @@
 {
-  "rom_url": "https://bigota.d.miui.com/21.5.20/miui_CETUS_21.5.20_e912406d4f_11.0.zip",
+  "rom_url": "https://jaist.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-WEEKLY-RELEASES/21.3.25/xiaomi.eu_multi_HMNote7_21.3.25_v12-10.zip",
   "rom_name": "update.zip",
   "pack_sgsi": "SGSI.zip",
   "make_type": "AB",
   "rom_type": "miui",
   "light_fix": true,
   "bug_fix": true,
-  "version": "11",
-  "upload_transfer": true,
+  "version": "10",
+  "upload_gof": false,
+  "upload_wet": true,
   "upload_release": false,
   "use_7zip": false,
   "use_zip": true
